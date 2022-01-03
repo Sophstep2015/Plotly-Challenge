@@ -33,7 +33,12 @@ function barchart(drop)
             type: "bar",
             orientation: "h"
         }
-        Plotly.newPlot("bar", [horizontalbar]);
+
+        let format = {
+            title: "Belly Button Bacteria (Top Ten)"
+        };
+
+        Plotly.newPlot("bar", [horizontalbar], format);
     });
 }
 // Bubble Chart function and loop
@@ -53,11 +58,12 @@ function bubbles(drop2)
                 color: bubblechart1.otu_ids,
             }
         }
-        let layout = {
+        let format2  = {
+            title: "Bacterial Levels Per Sample",
             showlegend: false, 
             hovermode: 'closest' 
         };
-        Plotly.newPlot('bubble', [bubbleChart], layout);
+        Plotly.newPlot('bubble', [bubbleChart], format2);
     });
 }
 //function loop for initial load
