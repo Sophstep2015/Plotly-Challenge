@@ -80,7 +80,7 @@ function initial_load()
     });
 }
 //update page when drop down changes 
-function optionChanged(change)
+function changed_dropdown(change)
 {
     demographic(change);
     barchart(change);
